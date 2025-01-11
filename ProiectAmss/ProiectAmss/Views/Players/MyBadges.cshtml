@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ProiectAmss.Models.Badge>
+
+@{
+    ViewData["Title"] = "My Badges";
+}
+
+<h3>Badges</h3>
+<ul>
+    @foreach (var badge in Model)
+    {
+        <li>@badge.Name</li>
+    }
+</ul>

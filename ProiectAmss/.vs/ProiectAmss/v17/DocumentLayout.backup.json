@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Info\\Facultate\\Master\\Anul1\\AMSS\\ProiectAmss\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD5433F5-F477-464E-AF0E-32491AA442DC}|ProiectAmss\\ProiectAmss.csproj|d:\\info\\facultate\\master\\anul1\\amss\\proiectamss\\proiectamss\\services\\playersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD5433F5-F477-464E-AF0E-32491AA442DC}|ProiectAmss\\ProiectAmss.csproj|solutionrelative:proiectamss\\services\\playersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayersService.cs",
+              "DocumentMoniker": "D:\\Info\\Facultate\\Master\\Anul1\\AMSS\\ProiectAmss\\ProiectAmss\\Services\\PlayersService.cs",
+              "RelativeDocumentMoniker": "ProiectAmss\\Services\\PlayersService.cs",
+              "ToolTip": "D:\\Info\\Facultate\\Master\\Anul1\\AMSS\\ProiectAmss\\ProiectAmss\\Services\\PlayersService.cs",
+              "RelativeToolTip": "ProiectAmss\\Services\\PlayersService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwEcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T18:36:18.4Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

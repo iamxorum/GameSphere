@@ -1,0 +1,20 @@
+﻿@model int
+<div>
+    <h3>Select a game for current event:</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Events" asp-action="ChooseGame" asp-route-id=@Model method="post">
+                <input type="hidden" name="eventId" value="@Model" />
+
+                <div class="form-group my-4">
+                    @Html.DropDownList("gameId", new SelectList(ViewBag.Games, "Value", "Text"),
+                             "Select a game", new { @class = "form-select" })
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
