@@ -20,7 +20,7 @@ Am utilizat **Repository Pattern** pentru că ajută la organizarea codului și 
 
 ### Builder Pattern
 
-Am folosit **Builder Pattern** pentru a configura și înregistra serviciile aplicației într-un mod organizat. Acesta permite adăugarea treptată a componentelor, precum repository-urile și serviciile, oferind flexibilitate și separare clară a responsabilităților. Prin `builder.Services`, am înregistrat dependințele necesare (repository-uri, servicii, Identity, Entity Framework), asigurând o inițializare eficientă și ușor de întreținut a aplicației.
+Am folosit **Builder Pattern** pentru a configura și înregistra serviciile aplicației într-un mod organizat. Acesta permite adăugarea treptată a componentelor, precum repository-urile și serviciile, oferind o separare clară a responsabilităților. Prin `builder.Services`, am înregistrat dependințele necesare (repository-uri, servicii, Identity, Entity Framework), asigurând o inițializare eficientă și ușor de întreținut a aplicației.
 
 ![Builder](https://github.com/user-attachments/assets/c85ede65-e95e-4d2d-b670-fe49585c34b6)
 
