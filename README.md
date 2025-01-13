@@ -70,6 +70,7 @@ Selectarea unui joc pentru eveniment de către Player, cu actualizarea bazei de 
 Check-in-ul la eveniment al Other Player, cu validarea și înregistrarea participării.
 Evaluarea condițiilor pentru acordarea unui badge, urmată de salvarea acestuia pentru utilizatorul eligibil.
 Aceasta evidențiază fluxul complet de la crearea conținutului până la interacțiunile utilizatorilor la evenimente și recompensarea lor.
+
 ![Sequence diagram](https://github.com/user-attachments/assets/6c1c4f2c-6acc-462d-82d7-88dfe98e75f6)
 
 
