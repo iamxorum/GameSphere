@@ -1,5 +1,39 @@
 # GameSphere | UniBuc - AAMS Group Project
-**GameSphere** is a platform that connects board game enthusiasts for local meetups, tournaments, and casual play. Find like-minded players, discover new games, and organize events effortlessly. GameSphere makes it easy to bring the tabletop gaming community together for fun and engaging experiences.
+**GameSphere** este o platformă care conectează pasionații de jocuri de societate pentru întâlniri locale, turnee și sesiuni de jocuri casuale. Găsește jucători cu aceleași interese, descoperă jocuri noi și organizează evenimente cu ușurință. GameSphere face ca reunirea comunității de jocuri de masă să fie simplă, oferind experiențe de distracție și interacțiune captivantă.
+
+# Cerinte functionale
+
+### Gestionarea evenimentelor de boardgame
+- Crearea de evenimente, specificând:
+  - Locul de desfășurare.
+  - Jocurile disponibile.
+  - Data și ora evenimentului.
+- Înregistrarea utilizatorilor la evenimente.
+
+### Propuneri
+- Posibilitatea de a propune noi jocuri.
+
+### Selecția jocului pentru eveniment
+- Organizatorul poate alege un joc pentru eveniment 
+- Comunicarea deciziei către participanți.
+
+### Validarea participării
+- Check-in pentru confirmarea participării la evenimente.
+
+### Baza de date a jocurilor
+- Include detalii despre jocuri:
+  - Număr minim/maxim de participanți.
+  - Reguli detaliate.
+
+### Sistemul de badge-uri
+- Badge-uri acordate utilizatorilor pentru:
+  - Prima participare la un eveniment
+ 
+# Cerințe nonfuncționale
+
+### Înregistrare și autentificare securizată
+-  Parolele utilizatorilor trebuie stocate criptat
+-  Parolele utilizatorilor trebuie să fie complexe (cel puțin o literă mare, cel puțin un caracter special, cel puțin o cifră, minim 10 caractere)
 
 # Design Patterns
 
