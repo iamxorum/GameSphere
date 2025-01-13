@@ -59,7 +59,7 @@ Am folosit **Builder Pattern** pentru a configura și înregistra serviciile apl
 ![Builder](https://github.com/user-attachments/assets/c85ede65-e95e-4d2d-b670-fe49585c34b6)
 
 
-Diagrama de secventa 
+### Diagrama de secventa 
 
 Diagrama de secvență arată interacțiunile dintre Admin, Player, Other Player, App și Database în cadrul aplicației GameSphere. Procesul include:
 
