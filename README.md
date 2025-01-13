@@ -59,3 +59,17 @@ Am folosit **Builder Pattern** pentru a configura și înregistra serviciile apl
 ![Builder](https://github.com/user-attachments/assets/c85ede65-e95e-4d2d-b670-fe49585c34b6)
 
 
+Diagrama de secventa 
+
+Diagrama de secvență arată interacțiunile dintre Admin, Player, Other Player, App și Database în cadrul aplicației GameSphere. Procesul include:
+
+Crearea unui joc de către Admin, cu salvarea detaliilor jocului în baza de date.
+Crearea unui eveniment de către Player, cu stocarea detaliilor în baza de date.
+Înregistrarea unui alt utilizator (Other Player) la eveniment.
+Selectarea unui joc pentru eveniment de către Player, cu actualizarea bazei de date.
+Check-in-ul la eveniment al Other Player, cu validarea și înregistrarea participării.
+Evaluarea condițiilor pentru acordarea unui badge, urmată de salvarea acestuia pentru utilizatorul eligibil.
+Aceasta evidențiază fluxul complet de la crearea conținutului până la interacțiunile utilizatorilor la evenimente și recompensarea lor.
+![Sequence diagram](https://github.com/user-attachments/assets/6c1c4f2c-6acc-462d-82d7-88dfe98e75f6)
+
+
