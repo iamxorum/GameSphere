@@ -73,4 +73,10 @@ Aceasta evidențiază fluxul complet de la crearea conținutului până la inter
 
 ![Sequence diagram](https://github.com/user-attachments/assets/6c1c4f2c-6acc-462d-82d7-88dfe98e75f6)
 
+### Diagrama de componente
+
+Diagrama de componente prezintă arhitectura sistemului GameSphere, în care interfața utilizatorului comunică printr-un API Gateway cu servicii specializate pentru utilizatori, evenimente și jocuri. Aceste servicii interacționează cu baza de date utilizând operațiuni CRUD pentru a gestiona datele necesare funcționalităților aplicației.
+
+![image](https://github.com/user-attachments/assets/3258549a-1376-4cd4-a67d-279bc8277b03)
+
 
