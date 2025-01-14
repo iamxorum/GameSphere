@@ -40,8 +40,6 @@
 O centralizare a diagramelor din cadrul echipei, cât și contribuția fiecărui membru se pot găsi în tabelul de mai jos:
 ![image](https://github.com/user-attachments/assets/f307ba75-394d-421e-a933-f16329f6aa76)
 
-
-
 # Design Patterns
 
 ### Model-View-Controller (MVC)
@@ -65,8 +63,118 @@ Am folosit **Builder Pattern** pentru a configura și înregistra serviciile apl
 
 ![Builder](https://github.com/user-attachments/assets/c85ede65-e95e-4d2d-b670-fe49585c34b6)
 
+### Diagrama de Clase UML
 
-### Diagrama de secventa 
+Diagrama UML ilustrează structura claselor și relațiile dintre componentele principale ale aplicației **GameSphere**. Aceasta include următoarele elemente cheie:
+
+#### Componenta Database
+- Gestionează conexiunea la baza de date
+- Metode principale:
+  - `getInstance()`: Database
+  - `connect()`: Connection
+  - `closeConnection()`: void
+
+#### Repository-uri
+1. **BadgeRepository**
+   - Gestionează operațiile legate de badge-uri
+   - Metode principale:
+     - `findById()`: void
+     - `createBadge()`: void
+     - `deleteBadge()`: void
+     - `updateBadge()`: void
+
+2. **UserRepository**
+   - Gestionează operațiile legate de utilizatori
+   - Metode principale:
+     - `login()`: void
+     - `create()`: void
+     - `update()`: void
+     - `delete()`: void
+
+3. **EventRepository**
+   - Gestionează operațiile legate de evenimente
+   - Metode principale:
+     - `findById()`: void
+     - `findAll()`: void
+
+4. **GameRepository**
+   - Gestionează operațiile legate de jocuri
+   - Metode principale:
+     - `findById()`: void
+     - `findAll()`: void
+
+#### Entități Principale
+1. **Badge**
+   - Atribute: badgeId, name, description, privileges
+   - Metode: assignBadge(), removeBadge()
+
+2. **Player**
+   - Atribute: userId, username, password, email, age, etc.
+   - Metode pentru gestionarea evenimentelor și interacțiunilor
+
+3. **Event**
+   - Atribute: eventId, name, startDate, maxParticipants
+   - Relații cu Player și Game
+
+4. **Game**
+   - Atribute: gameId, name
+   - Asocieri cu Event prin EventGameAssociation
+
+#### Asocieri
+- **BadgeUserAssociation**: Leagă badge-urile de utilizatori
+- **EventGameAssociation**: Leagă evenimentele de jocuri
+- Implementarea interfeței **Reportable** pentru generarea rapoartelor
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/UML.jpeg)
+
+### Diagrama Bazei de Date
+
+Baza de date a aplicației **GameSphere** este structurată în jurul mai multor entități cheie care gestionează informațiile necesare pentru funcționarea platformei:
+
+#### Entități Principale:
+- **Player (Jucător)**
+  - `id`: varchar(255) - identificator unic (PK)
+  - `username`: varchar(50) - numele de utilizator
+  - `email`: varchar(50) - adresa de email
+  - `password`: varchar(50) - parola criptată
+
+- **Event (Eveniment)**
+  - `id`: int - identificator unic (PK)
+  - `name`: varchar(50) - numele evenimentului
+  - `location`: varchar(255) - locația
+  - `start_date`: date - data evenimentului
+  - `max_players`: int - numărul maxim de participanți
+  - `owner_id`: varchar(255) (FK) - ID-ul organizatorului
+  - `chosen_game_id`: int (FK) - ID-ul jocului ales
+
+- **Game (Joc)**
+  - `id`: varchar(255) - identificator unic (PK)
+  - `name`: varchar(50) - numele jocului
+  - `max_participants`: varchar(50) - numărul maxim de participanți
+  - `rules`: varchar(50) - regulile jocului
+
+#### Tabele de Legătură:
+- **PlayerEvent**
+  - Leagă jucătorii de evenimentele la care participă
+  - Conține `event_id` și `player_id` ca chei externe
+
+- **PlayerRole**
+  - Gestionează rolurile utilizatorilor în aplicație
+  - Conține `player_id` și `role_id` ca chei externe
+
+- **EventGame**
+  - Asociază jocurile cu evenimentele
+  - Conține `game_id` și `event_id` ca chei externe
+
+#### Relații:
+- Un jucător poate participa la multiple evenimente (1:N prin PlayerEvent)
+- Un eveniment poate avea mai mulți participanți (1:N prin PlayerEvent)
+- Un jucător poate avea multiple roluri (1:N prin PlayerRole)
+- Un eveniment este asociat cu un singur joc ales (1:1 prin chosen_game_id)
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/ERD_Diagram.jpeg)
+
+### Diagrama de Secventa 
 
 Diagrama de secvență arată interacțiunile dintre Admin, Player, Other Player, App și Database în cadrul aplicației GameSphere. Procesul include:
 
@@ -78,20 +186,19 @@ Check-in-ul la eveniment al Other Player, cu validarea și înregistrarea partic
 Evaluarea condițiilor pentru acordarea unui badge, urmată de salvarea acestuia pentru utilizatorul eligibil.
 Aceasta evidențiază fluxul complet de la crearea conținutului până la interacțiunile utilizatorilor la evenimente și recompensarea lor.
 
-![Sequence diagram](https://github.com/user-attachments/assets/6c1c4f2c-6acc-462d-82d7-88dfe98e75f6)
+![Sequence diagram](https://github.com/iamxorum/GameSphere/blob/main/assets/Sequence_diagram.png)
 
-### Diagrama de componente
+### Diagrama de Componente
 
 Diagrama de componente prezintă arhitectura sistemului GameSphere, în care interfața utilizatorului comunică printr-un API Gateway cu servicii specializate pentru utilizatori, evenimente și jocuri. Aceste servicii interacționează cu baza de date utilizând operațiuni CRUD pentru a gestiona datele necesare funcționalităților aplicației.
 
-![image](https://github.com/user-attachments/assets/3258549a-1376-4cd4-a67d-279bc8277b03)
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/components_diagram.png)
 
 ### Diagrama de Activitate
 
 Diagrama de activitate ilustrează fluxul principal al aplicației, începând cu autentificarea utilizatorului și verificarea rolului său. Adminii au posibilitatea de a crea jocuri, care sunt salvate în baza de date, în timp ce Jucătorii pot iniția evenimente. Utilizatorii pot vizualiza evenimentele disponibile și își pot exprima preferințele pentru jocuri. Creatorul evenimentului are responsabilitatea de a alege jocul ce va fi jucat, luând în considerare preferințele participanților. Un pas esențial în acest proces este verificarea numărului de participanți: dacă limita maximă nu a fost atinsă, utilizatorul se poate înregistra la eveniment. În caz contrar, înregistrarea este refuzată. În continuare are loc evenimentul, iar la final, sunt acordate badge-uri. Diagrama evidențiază pașii esențiali și deciziile cheie din cadrul acestui proces.
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/activitydiagram.png)
-
 
 ### Diagrama de Pachete
 
@@ -110,3 +217,92 @@ Diagrama folosește următoarele relații:
 - renders: Reflectă transmiterea datelor către utilizatori sub formă vizuală.
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/packagediagram.png)
+
+### Diagrama de Structură
+
+Diagrama de structură a aplicației GameSphere ilustrează arhitectura generală a sistemului, evidențiind interacțiunile dintre componentele principale. Aceasta include:
+
+- Interfața Utilizatorului: Componenta care permite utilizatorilor să interacționeze cu aplicația.
+- API Gateway: Punctul central de acces pentru toate cererile, care redirecționează traficul către serviciile corespunzătoare.
+- Serviciile de Business: Acestea includ servicii pentru gestionarea utilizatorilor, evenimentelor, jocurilor și sistemului de badge-uri, fiecare având responsabilități specifice.
+- Baza de Date: Structura care stochează informațiile despre utilizatori, evenimente, jocuri și badge-uri, utilizând operațiuni CRUD pentru gestionarea datelor.
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/Structural_diagram.png)
+
+### Diagrama de Comportament
+
+Diagrama de comportament descrie fluxul de interacțiune al utilizatorilor în cadrul aplicației GameSphere. Aceasta include:
+
+- Autentificarea Utilizatorului: Procesul prin care utilizatorii se conectează la aplicație, cu validarea rolului lor (Admin sau Jucător).
+- Gestionarea Evenimentelor: Fluxul de creare, vizualizare și participare la evenimente, inclusiv selecția jocului și validarea numărului de participanți.
+- Sistemul de Badge-uri: Mecanismul prin care utilizatorii primesc recompense pentru participarea la evenimente.
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/Behavioural_diagram.jpeg)
+
+### Diagrama de Activitate
+
+Diagrama de activitate ilustrează fluxul principal al aplicației **GameSphere**, urmărind pașii principali de la autentificare până la finalizarea unui eveniment:
+
+#### Fluxul de Autentificare
+- Verificarea stării de autentificare a utilizatorului
+- Dacă utilizatorul nu este autentificat:
+  - Proces de autentificare
+  - Verificare utilizator nou/existent
+  - Înregistrare pentru utilizatori noi
+
+#### Gestionarea Evenimentelor
+- După autentificare, utilizatorul poate:
+  - Vizualiza evenimentele disponibile
+  - Crea evenimente noi (completare detalii eveniment)
+
+#### Participare la Evenimente
+- Utilizatorii pot:
+  - Exprima preferințe pentru jocuri
+  - Propune jocuri noi
+- Sistem de verificare pentru:
+  - Numărul minim de participanți
+  - Validarea participării prin check-in
+
+#### Finalizare Eveniment
+- Verificarea desfășurării cu succes a evenimentului
+- În funcție de rezultat:
+  - Eveniment finalizat cu succes
+  - Feedback negativ în caz de probleme
+- Posibilitatea anulării evenimentului dacă nu sunt îndeplinite condițiile necesare
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/UseCaseDiagram.png)
+
+### Diagrama de Deployment
+
+Diagrama de deployment ilustrează arhitectura fizică a sistemului **GameSphere**, prezentând distribuția componentelor și relațiile dintre acestea:
+
+#### Componente Principale
+
+1. **AppServer**
+   - Device: Server de aplicație
+   - Mediu de execuție: ASP.NET Core
+   - Artefacte:
+     - DLL Files (fișierele compilate ale aplicației)
+
+2. **DatabaseServer**
+   - Device: Server de bază de date
+   - Engine: Microsoft SQL Server
+   - Artefacte:
+     - DB Schema (structura bazei de date)
+
+3. **UserClient**
+   - Device: Browser-ul utilizatorului
+   - Componente:
+     - Browser
+     - HTML5 - Razor Views (interfața utilizator)
+
+#### Conexiuni
+- Comunicare între AppServer și DatabaseServer prin:
+  - Protocol: ADO.NET (SQL Protocol)
+  - Asigură accesul la baza de date
+
+- Comunicare între UserClient și AppServer prin:
+  - Protocol: TCP :80
+  - Facilitează interacțiunea utilizatorului cu aplicația
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/Deployment_Diagram.jpg)
