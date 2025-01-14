@@ -35,6 +35,11 @@
 -  Parolele utilizatorilor trebuie stocate criptat
 -  Parolele utilizatorilor trebuie să fie complexe (cel puțin o literă mare, cel puțin un caracter special, cel puțin o cifră, minim 10 caractere)
 
+ ### Contribuțiile echipei în cadrul proiectului:
+O centralizare a diagramelor din cadrul echipei, cât și contribuția fiecărui membru se pot găsi în tabelul de mai jos:
+![image](https://github.com/user-attachments/assets/7113bbab-dd3e-4d9d-b4ab-aef60f143928)
+
+
 # Design Patterns
 
 ### Model-View-Controller (MVC)
