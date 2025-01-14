@@ -189,9 +189,9 @@ Diagrama de structură a aplicației GameSphere ilustrează arhitectura general�
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/Structural_diagram.png)
 
-### Diagrama de Comportament
+### Diagrama de State Machine 
 
-Diagrama de comportament descrie fluxul de interacțiune al utilizatorilor în cadrul aplicației GameSphere. Aceasta include:
+Diagrama de comportament (State Machine Diagram) descrie fluxul de interacțiune al utilizatorilor în cadrul aplicației GameSphere. Aceasta include:
 
 - Autentificarea Utilizatorului: Procesul prin care utilizatorii se conectează la aplicație, cu validarea rolului lor (Admin sau Jucător).
 - Gestionarea Evenimentelor: Fluxul de creare, vizualizare și participare la evenimente, inclusiv selecția jocului și validarea numărului de participanți.
