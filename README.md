@@ -38,7 +38,8 @@
 
  ### Contribuțiile echipei în cadrul proiectului:
 O centralizare a diagramelor din cadrul echipei, cât și contribuția fiecărui membru se pot găsi în tabelul de mai jos:
-![image](https://github.com/user-attachments/assets/f307ba75-394d-421e-a933-f16329f6aa76)
+![image](https://github.com/user-attachments/assets/695ef875-7e53-4ca1-bdec-db73cd15004d)
+
 
 # Design Patterns
 
@@ -107,7 +108,7 @@ Diagrama UML ilustrează structura claselor și relațiile dintre componentele p
 1. **Badge**
    - Atribute: badgeId, name, description, privileges
    - Metode: assignBadge(), removeBadge()
-
+pap
 2. **Player**
    - Atribute: userId, username, password, email, age, etc.
    - Metode pentru gestionarea evenimentelor și interacțiunilor
@@ -204,12 +205,12 @@ Diagrama de activitate ilustrează fluxul principal al aplicației, începând c
 
 Pachetele oferă o modalitate de a grupa elementele și de a stabili dependențele dintre componentele aplicației.
 
-Controllers: Gestionează cererile utilizatorilor și le transmite către Services. Totodată, preia datele procesate din alte pachete și le trimite către Views, unde sunt afișate utilizatorilor.
-Services: Conține logica principală a aplicației, procesează datele și apelează metodele din Repositories pentru interacțiunea cu baza de date.
-Repositories: Accesează direct baza de date, folosind Data pentru operații CRUD. În același timp, folosesc Models pentru reprezentarea și manipularea datelor din baza de date.
-Models: Definește structurile de date utilizate în aplicație, precum jocuri, evenimente sau utilizatori, și este folosit atât de Controller, cât și de Services.
-Data: Stochează setările bazei de date și inițializarea datelor, accesate de Repositories pentru configurarea aplicației.
-Views: Afișează informațiile utilizatorilor sub formă de elemente vizuale, bazându-se pe datele primite de la Controllers.
+- Pachetul Controllers gestionează cererile utilizatorilor și le transmite către Services. Totodată, preia datele procesate din alte pachete și le trimite către Views, unde sunt afișate utilizatorilor.
+- Services conține logica principală a aplicației, procesează datele și apelează metodele din Repositories pentru interacțiunea cu baza de date. Totodată, acest pachet folosește Models pentru a manipula datele.
+- Pachetul Repositories accesează direct baza de date, folosind Data pentru operații CRUD. În același timp, folosesc Models pentru reprezentarea și manipularea datelor din baza de date.
+- Models este format din structuri de date care definesc entitățile aplicației, precum jocuri, evenimente sau utilizatori.
+- Pachetul Data gestionează conexiunea și interacțiunea cu baza de date, inclusiv popularea acesteia cu date inițiale.
+- Views afișează informațiile utilizatorilor sub formă de elemente vizuale, având la bază datele primite de la Controller
 
 Diagrama folosește următoarele relații:
 - uses: Indică utilizarea directă a elementelor, precum clase sau metode, dintr-un alt pachet.
