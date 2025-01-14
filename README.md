@@ -69,64 +69,6 @@ Am folosit **Builder Pattern** pentru a configura și înregistra serviciile apl
 
 Diagrama UML ilustrează structura claselor și relațiile dintre componentele principale ale aplicației **GameSphere**. Aceasta include următoarele elemente cheie:
 
-#### Componenta Database
-- Gestionează conexiunea la baza de date
-- Metode principale:
-  - `getInstance()`: Database
-  - `connect()`: Connection
-  - `closeConnection()`: void
-
-#### Repository-uri
-1. **BadgeRepository**
-   - Gestionează operațiile legate de badge-uri
-   - Metode principale:
-     - `findById()`: void
-     - `createBadge()`: void
-     - `deleteBadge()`: void
-     - `updateBadge()`: void
-
-2. **UserRepository**
-   - Gestionează operațiile legate de utilizatori
-   - Metode principale:
-     - `login()`: void
-     - `create()`: void
-     - `update()`: void
-     - `delete()`: void
-
-3. **EventRepository**
-   - Gestionează operațiile legate de evenimente
-   - Metode principale:
-     - `findById()`: void
-     - `findAll()`: void
-
-4. **GameRepository**
-   - Gestionează operațiile legate de jocuri
-   - Metode principale:
-     - `findById()`: void
-     - `findAll()`: void
-
-#### Entități Principale
-1. **Badge**
-   - Atribute: badgeId, name, description, privileges
-   - Metode: assignBadge(), removeBadge()
-pap
-2. **Player**
-   - Atribute: userId, username, password, email, age, etc.
-   - Metode pentru gestionarea evenimentelor și interacțiunilor
-
-3. **Event**
-   - Atribute: eventId, name, startDate, maxParticipants
-   - Relații cu Player și Game
-
-4. **Game**
-   - Atribute: gameId, name
-   - Asocieri cu Event prin EventGameAssociation
-
-#### Asocieri
-- **BadgeUserAssociation**: Leagă badge-urile de utilizatori
-- **EventGameAssociation**: Leagă evenimentele de jocuri
-- Implementarea interfeței **Reportable** pentru generarea rapoartelor
-
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/UML.jpeg)
 
 ### Diagrama Bazei de Date
@@ -175,6 +117,22 @@ Baza de date a aplicației **GameSphere** este structurată în jurul mai multor
 - Un eveniment este asociat cu un singur joc ales (1:1 prin chosen_game_id)
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/ERD_Diagram.jpeg)
+
+### Diagrama de Secventa 
+Diagrama de secventa prezinta cazurile de utilizare in functie de tipul de utilizator.
+Utilizator nelogat:
+  - logare
+  - inregistrare
+Utilizatorul logat:
+  - creare eveniment
+  - inregistrare eveniment
+  - check in
+  - propune joc
+  - alege joc
+Admin:
+  - adauga joc nou
+System:
+  - adauga badge la utilizator
 
 ### Diagrama de Secventa 
 
