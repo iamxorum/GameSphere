@@ -1,5 +1,5 @@
 # GameSphere | UniBuc - AAMS Group Project
-**GameSphere** este o platformă care conectează pasionații de jocuri de societate pentru întâlniri locale, turnee și sesiuni de jocuri casuale. Găsește jucători cu aceleași interese, descoperă jocuri noi și organizează evenimente cu ușurință. GameSphere face ca reunirea comunității de jocuri de masă să fie simplă, oferind experiențe de distracție și interacțiune captivantă.
+**GameSphere** este o platformă care conectează pasionații de jocuri de societate pentru întâlniri locale, turnee și sesiuni de jocuri distractive.
 
 # Cerinte functionale
 
