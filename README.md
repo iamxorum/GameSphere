@@ -79,4 +79,27 @@ Diagrama de componente prezintă arhitectura sistemului GameSphere, în care int
 
 ![image](https://github.com/user-attachments/assets/3258549a-1376-4cd4-a67d-279bc8277b03)
 
+### Diagrama de Activitate
 
+Diagrama de activitate ilustrează fluxul principal al aplicației, începând cu autentificarea utilizatorului și verificarea rolului său. Adminii au posibilitatea de a crea jocuri, care sunt salvate în baza de date, în timp ce Jucătorii pot iniția evenimente. Utilizatorii pot vizualiza evenimentele disponibile și își pot exprima preferințele pentru jocuri. Creatorul evenimentului are responsabilitatea de a alege jocul ce va fi jucat, luând în considerare preferințele participanților. Un pas esențial în acest proces este verificarea numărului de participanți: dacă limita maximă nu a fost atinsă, utilizatorul se poate înregistra la eveniment. În caz contrar, înregistrarea este refuzată. În continuare are loc evenimentul, iar la final, sunt acordate badge-uri. Diagrama evidențiază pașii esențiali și deciziile cheie din cadrul acestui proces.
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/activitydiagram.png)
+
+
+### Diagrama de Pachete
+
+Pachetele oferă o modalitate de a grupa elementele și de a stabili dependențele dintre componentele aplicației.
+
+Controllers: Gestionează cererile utilizatorilor și le transmite către Services. Totodată, preia datele procesate din alte pachete și le trimite către Views, unde sunt afișate utilizatorilor.
+Services: Conține logica principală a aplicației, procesează datele și apelează metodele din Repositories pentru interacțiunea cu baza de date.
+Repositories: Accesează direct baza de date, folosind Data pentru operații CRUD. În același timp, folosesc Models pentru reprezentarea și manipularea datelor din baza de date.
+Models: Definește structurile de date utilizate în aplicație, precum jocuri, evenimente sau utilizatori, și este folosit atât de Controller, cât și de Services.
+Data: Stochează setările bazei de date și inițializarea datelor, accesate de Repositories pentru configurarea aplicației.
+Views: Afișează informațiile utilizatorilor sub formă de elemente vizuale, bazându-se pe datele primite de la Controllers.
+
+Diagrama folosește următoarele relații:
+- uses: Indică utilizarea directă a elementelor, precum clase sau metode, dintr-un alt pachet.
+- import: Afișează că anumite module sunt utilizate global în alte secțiuni, fiind esențiale pentru funcționarea întregii aplicații.
+- renders: Reflectă transmiterea datelor către utilizatori sub formă vizuală.
+
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/packagediagram.png)
