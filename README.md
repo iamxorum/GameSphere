@@ -38,7 +38,8 @@
 
  ### Contribuțiile echipei în cadrul proiectului:
 O centralizare a diagramelor din cadrul echipei, cât și contribuția fiecărui membru se pot găsi în tabelul de mai jos:
-![image](https://github.com/user-attachments/assets/695ef875-7e53-4ca1-bdec-db73cd15004d)
+![image](https://github.com/user-attachments/assets/c9010235-9bb2-4f88-8a62-1239616844bf)
+
 
 
 # Design Patterns
