@@ -239,36 +239,33 @@ Diagrama de comportament descrie fluxul de interacțiune al utilizatorilor în c
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/Behavioural_diagram.jpeg)
 
-### Diagrama de Activitate
+### Diagrama Use Case
 
-Diagrama de activitate ilustrează fluxul principal al aplicației **GameSphere**, urmărind pașii principali de la autentificare până la finalizarea unui eveniment:
+Diagrama use case ilustrează interacțiunile posibile ale diferitelor tipuri de utilizatori cu aplicația **GameSphere**. Aceasta prezintă funcționalitățile disponibile pentru fiecare rol de utilizator:
 
-#### Fluxul de Autentificare
-- Verificarea stării de autentificare a utilizatorului
-- Dacă utilizatorul nu este autentificat:
-  - Proces de autentificare
-  - Verificare utilizator nou/existent
-  - Înregistrare pentru utilizatori noi
+#### Actori și Funcționalități
 
-#### Gestionarea Evenimentelor
-- După autentificare, utilizatorul poate:
-  - Vizualiza evenimentele disponibile
-  - Crea evenimente noi (completare detalii eveniment)
+1. **Guest User (Utilizator Neautentificat)**
+   - Login (Autentificare)
+   - Register (Înregistrare)
 
-#### Participare la Evenimente
-- Utilizatorii pot:
-  - Exprima preferințe pentru jocuri
-  - Propune jocuri noi
-- Sistem de verificare pentru:
-  - Numărul minim de participanți
-  - Validarea participării prin check-in
+2. **Admin (Administrator)**
+   - Add game (Adăugare joc nou în sistem)
+   - Toate funcționalitățile unui utilizator autentificat
 
-#### Finalizare Eveniment
-- Verificarea desfășurării cu succes a evenimentului
-- În funcție de rezultat:
-  - Eveniment finalizat cu succes
-  - Feedback negativ în caz de probleme
-- Posibilitatea anulării evenimentului dacă nu sunt îndeplinite condițiile necesare
+3. **Player (Jucător)**
+   - Create event (Creare eveniment nou)
+   - Sign in for an event (Înscriere la un eveniment)
+   - Propose a game (Propunere joc nou)
+   - Choose game (Alegere joc pentru eveniment)
+   - Check-in at a event (Confirmare prezență la eveniment)
+   - Add badge to player (Primire/vizualizare badge-uri)
+
+#### Caracteristici Principale
+- Ierarhie clară a rolurilor utilizatorilor
+- Separare distinctă a funcționalităților administrative
+- Funcționalități specifice pentru organizarea și participarea la evenimente
+- Sistem de recompense prin badge-uri
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/UseCaseDiagram.png)
 
