@@ -119,22 +119,6 @@ Baza de date a aplicației **GameSphere** este structurată în jurul mai multor
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/ERD_Diagram.jpeg)
 
 ### Diagrama de Secventa 
-Diagrama de secventa prezinta cazurile de utilizare in functie de tipul de utilizator.
-Utilizator nelogat:
-  - logare
-  - inregistrare
-Utilizatorul logat:
-  - creare eveniment
-  - inregistrare eveniment
-  - check in
-  - propune joc
-  - alege joc
-Admin:
-  - adauga joc nou
-System:
-  - adauga badge la utilizator
-
-### Diagrama de Secventa 
 
 Diagrama de secvență arată interacțiunile dintre Admin, Player, Other Player, App și Database în cadrul aplicației GameSphere. Procesul include:
 
