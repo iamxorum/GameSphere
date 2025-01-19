@@ -116,7 +116,7 @@ Baza de date a aplicației **GameSphere** este structurată în jurul mai multor
 - Un jucător poate avea multiple roluri (1:N prin PlayerRole)
 - Un eveniment este asociat cu un singur joc ales (1:1 prin chosen_game_id)
 
-![image](https://github.com/iamxorum/GameSphere/blob/main/assets/ERD_Diagram.jpeg)
+![image](https://github.com/iamxorum/GameSphere/blob/main/assets/ERD_Diagram.jpg)
 
 ### Diagrama de Secventa 
 
