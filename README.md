@@ -111,10 +111,12 @@ Baza de date a aplicației **GameSphere** este structurată în jurul mai multor
   - Conține `game_id` și `event_id` ca chei externe
 
 #### Relații:
-- Un jucător poate participa la multiple evenimente (1:N prin PlayerEvent)
-- Un eveniment poate avea mai mulți participanți (1:N prin PlayerEvent)
-- Un jucător poate avea multiple roluri (1:N prin PlayerRole)
-- Un eveniment este asociat cu un singur joc ales (1:1 prin chosen_game_id)
+- Un jucător poate participa la multiple evenimente si un eveniment are mai multe jucatori (N:N prin PlayerEvent)
+- Un jucător poate avea multiple roluri si un rol poate fi detinut de mai multi jucatori (N:N prin PlayerRole)
+- Un eveniment poate alege cu un singur joc ales si un joc poate fi ales de mai multe evenimente (1:N prin chosen_game_id)
+- Un jucator poate avea mai multe badge-uri si un badge poate fi detinut de mai multi utilizatori (N:N PlayerBadge)
+- Un eveniment poate avea mai multe jocuri propuse si un joc poate fi propus la mai multe evenimente (N:N EventGame)
+- Un eveniment este organizat de un jucator si un jucator poate organiza mai multe evenimente (1:N prin owner_id)
 
 ![image](https://github.com/iamxorum/GameSphere/blob/main/assets/ERD_Diagram.jpg)
 
